@@ -1,0 +1,31 @@
+{
+  "name": "nanowrimo-tools",
+  "version": "1.0.0",
+  "description": "Some helpful tools for use during NaNoWriMo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "watchtest": "nodemon -e js -x \"npm test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkWithall/nanowrimo-tools.git"
+  },
+  "keywords": [
+    "nanowrimo"
+  ],
+  "author": "Mark Withall <github@markwithall.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MarkWithall/nanowrimo-tools/issues"
+  },
+  "homepage": "https://github.com/MarkWithall/nanowrimo-tools#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "jasmine": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "nodemon": "^1.12.1"
+  }
+}
