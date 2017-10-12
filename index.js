@@ -3,9 +3,6 @@
 this.ns = this.ns || {};
 
 this.ns.obfuscateText = function (text) {
-    if (text === '') {
-        return '';
-    }
     return text
         .split(' ')
         .filter(function(x) { return x !== '' })
