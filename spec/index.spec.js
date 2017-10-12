@@ -12,7 +12,7 @@ describe('obfuscateText', () => {
     it('returns "a" given a different single word', () => {
         expect(sample.ns.obfuscateText('world')).toBe('a');
     });
-    it('returns two "a a" given two words', () => {
+    it('returns "a a" given two words', () => {
         expect(sample.ns.obfuscateText('hello world')).toBe('a a');
     });
     it('returns "a a a" given three words', () => {
