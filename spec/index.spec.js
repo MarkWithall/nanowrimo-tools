@@ -21,4 +21,7 @@ describe('obfuscateText', () => {
     it('return "a a" given two words separated by two spaces', () => {
         expect(sample.ns.obfuscateText('hello  world')).toBe('a a');
     });
+    it('returns "a a" given a single hyphenated word', () => {
+        expect(sample.ns.obfuscateText('hello-world')).toBe('a a');
+    });
 });
