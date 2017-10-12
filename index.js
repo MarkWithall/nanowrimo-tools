@@ -6,9 +6,6 @@ this.ns.obfuscateText = function (text) {
     if (text === '') {
         return '';
     }
-    if (text.split(' ').length === 1) {
-        return 'a';
-    }
     return text.split(' ').map(function() { return 'a' }).join(' ');
 };
 
