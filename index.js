@@ -10,7 +10,3 @@ this.ns.obfuscateText = function (text) {
         .map(function() { return 'a' })
         .join(' ');
 };
-
-if (typeof Window !== 'undefined' && this instanceof Window) {
-    alert(this.ns.test());
-}
