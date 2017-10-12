@@ -18,4 +18,7 @@ describe('obfuscateText', () => {
     it('returns "a a a" given three words', () => {
         expect(sample.ns.obfuscateText('foo bar baz')).toBe('a a a');
     });
+    it('return "a a" given two words separated by two spaces', () => {
+        expect(sample.ns.obfuscateText('hello  world')).toBe('a a');
+    });
 });
