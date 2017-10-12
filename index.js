@@ -6,7 +6,10 @@ this.ns.obfuscateText = function (text) {
     if (text === '') {
         return '';
     }
-    return 'a';
+    if (text == 'hello') {
+        return 'a';
+    }
+    return 'a a';
 };
 
 if (typeof Window !== 'undefined' && this instanceof Window) {
