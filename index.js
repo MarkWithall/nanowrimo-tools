@@ -3,7 +3,10 @@
 this.ns = this.ns || {};
 
 this.ns.obfuscateText = function (text) {
-    return '';
+    if (text === '') {
+        return '';
+    }
+    return 'a';
 };
 
 if (typeof Window !== 'undefined' && this instanceof Window) {
