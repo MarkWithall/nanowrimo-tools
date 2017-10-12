@@ -9,7 +9,7 @@ this.ns.obfuscateText = function (text) {
     if (text.split(' ').length === 1) {
         return 'a';
     }
-    return 'a a';
+    return text.split(' ').map(function() { return 'a' }).join(' ');
 };
 
 if (typeof Window !== 'undefined' && this instanceof Window) {

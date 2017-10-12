@@ -15,4 +15,7 @@ describe('obfuscateText', () => {
     it('returns two "a a" given two words', () => {
         expect(sample.ns.obfuscateText('hello world')).toBe('a a');
     });
+    it('returns "a a a" given three words', () => {
+        expect(sample.ns.obfuscateText('foo bar baz')).toBe('a a a');
+    });
 });
