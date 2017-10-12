@@ -1,6 +1,6 @@
 'use strict';
 
-const obfuscateText = require('../index.js').ns.obfuscateText;
+const obfuscateText = require('../index.js').nanowrimo.obfuscateText;
 
 describe('obfuscateText', () => {
     it('returns an empty string given an empty string', () => {

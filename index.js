@@ -1,8 +1,8 @@
 'use strict';
 
-this.ns = this.ns || {};
+this.nanowrimo = this.nanowrimo || {};
 
-this.ns.obfuscateText = function (text) {
+this.nanowrimo.obfuscateText = function (text) {
     return text
         .replace('-', ' ')
         .split(' ')
