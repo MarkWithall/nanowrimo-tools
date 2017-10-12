@@ -6,7 +6,11 @@ this.ns.obfuscateText = function (text) {
     if (text === '') {
         return '';
     }
-    return text.split(' ').filter(function(x) { return x !== '' }).map(function() { return 'a' }).join(' ');
+    return text
+        .split(' ')
+        .filter(function(x) { return x !== '' })
+        .map(function() { return 'a' })
+        .join(' ');
 };
 
 if (typeof Window !== 'undefined' && this instanceof Window) {
