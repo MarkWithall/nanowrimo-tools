@@ -6,11 +6,18 @@
         <h1>NaNoWriMo Tools</h1>
 
         <form>
-            <textarea id="inputtext" rows="10" cols="80"></textarea>
-            <br/>
-            <textarea id="outputtext" rows="10" cols="80"></textarea>
-            <br/>
-            <button type="button" onclick="document.getElementById('outputtext').value = nanowrimo.obfuscateText(document.getElementById('inputtext').value);">Obfuscate</button>
+            <fieldset>
+                <legend>Text Obfuscator</legend>
+                <label for="inputtext">Input</label>
+                <br/>
+                <textarea id="inputtext" rows="10" cols="80"></textarea>
+                <br/>
+                <label for="outputtext">Output</label>
+                <br/>
+                <textarea id="outputtext" rows="10" cols="80"></textarea>
+                <br/>
+                <button type="button" onclick="document.getElementById('outputtext').value = nanowrimo.obfuscateText(document.getElementById('inputtext').value);">Obfuscate</button>
+            </fieldset>
         </form>
 
         <script src="index.js"></script>
