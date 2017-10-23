@@ -4,7 +4,7 @@ this.nanowrimo = this.nanowrimo || {};
 
 this.nanowrimo.obfuscateText = function (text) {
     return text
-        .replace(/[-\r\n]/, ' ')
+        .replace(/[-\t\r\n]/, ' ')
         .split(' ')
         .filter(function(x) { return x !== '' })
         .map(function() { return 'a' })

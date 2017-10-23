@@ -27,4 +27,7 @@ describe('obfuscateText', () => {
     it('returns "a a" given words separated by crlf', () => {
         expect(obfuscateText('hello\r\nworld')).toBe('a a');
     });
+    it('returns "a a" given words separated by tab', () => {
+        expect(obfuscateText('hello\tworld')).toBe('a a');
+    });
 });
