@@ -1,11 +1,12 @@
 'use strict';
 
-this.ns = this.ns || {};
+this.nanowrimo = this.nanowrimo || {};
 
-this.ns.test = function () {
-    return 'hello world';
+this.nanowrimo.obfuscateText = function (text) {
+    return text
+        .replace(/\W/, ' ')
+        .split(' ')
+        .filter(function(x) { return x !== '' })
+        .map(function() { return 'a' })
+        .join(' ');
 };
-
-if (typeof Window !== 'undefined' && this instanceof Window) {
-    alert(this.ns.test());
-}

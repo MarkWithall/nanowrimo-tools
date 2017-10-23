@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jasmine",
     "lint": "eslint .",
-    "pretest": "npm run lint",
+    "posttest": "npm run lint",
     "watchtest": "nodemon -e js -x \"npm test\""
   },
   "repository": {

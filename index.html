@@ -1,9 +1,25 @@
+<!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>NaNoWriMo Tools</title>
+        <style>
+            textarea { display: block; }
+        </style>
     </head>
     <body>
         <h1>NaNoWriMo Tools</h1>
+
+        <form>
+            <fieldset>
+                <legend>Text Obfuscator</legend>
+                <label for="inputtext">Input</label>
+                <textarea id="inputtext" rows="10" cols="80"></textarea>
+                <label for="outputtext">Output</label>
+                <textarea id="outputtext" rows="10" cols="80"></textarea>
+                <button type="button" onclick="document.getElementById('outputtext').value = nanowrimo.obfuscateText(document.getElementById('inputtext').value);">Obfuscate</button>
+            </fieldset>
+        </form>
 
         <script src="index.js"></script>
     </body>
