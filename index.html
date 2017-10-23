@@ -1,6 +1,9 @@
 <html>
     <head>
         <title>NaNoWriMo Tools</title>
+        <style>
+            textarea { display: block; }
+        </style>
     </head>
     <body>
         <h1>NaNoWriMo Tools</h1>
@@ -9,13 +12,9 @@
             <fieldset>
                 <legend>Text Obfuscator</legend>
                 <label for="inputtext">Input</label>
-                <br/>
                 <textarea id="inputtext" rows="10" cols="80"></textarea>
-                <br/>
                 <label for="outputtext">Output</label>
-                <br/>
                 <textarea id="outputtext" rows="10" cols="80"></textarea>
-                <br/>
                 <button type="button" onclick="document.getElementById('outputtext').value = nanowrimo.obfuscateText(document.getElementById('inputtext').value);">Obfuscate</button>
             </fieldset>
         </form>
