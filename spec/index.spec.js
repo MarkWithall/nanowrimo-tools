@@ -24,4 +24,7 @@ describe('obfuscateText', () => {
     it('returns "a a" given a single hyphenated word', () => {
         expect(obfuscateText('hello-world')).toBe('a a');
     });
+    it('returns "a a" given words separated by crlf', () => {
+        expect(obfuscateText('hello\r\nworld')).toBe('a a');
+    });
 });
