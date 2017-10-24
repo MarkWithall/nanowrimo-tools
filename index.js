@@ -4,20 +4,18 @@
     global.nanowrimo = global.nanowrimo || {};
 
     global.nanowrimo.obfuscateText = function(text) {
-        return text
-            .replace(/\W/, ' ')
-            .split(' ')
-            .filter(function(x) { return x !== '' })
-            .map(function() { return 'a' })
-            .join(' ');
+        return splitIntoWords(text).join(' ');
     };
 
     global.nanowrimo.countWords = function(text) {
+        return splitIntoWords(text).length;
+    };
+
+    function splitIntoWords(text) {
         return text
             .replace(/\W/, ' ')
             .split(' ')
             .filter(function(x) { return x !== '' })
-            .map(function() { return 'a' })
-            .length;
-    };
+            .map(function() { return 'a' });
+    }
 })(this);
