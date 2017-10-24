@@ -21,6 +21,17 @@
             </fieldset>
         </form>
 
+        <form>
+            <fieldset>
+                <legend>Word Count</legend>
+                <label for="inputtext2">Input</label>
+                <textarea id="inputtext2" rows="10" cols="80"></textarea>
+                <label for="outputtext2">Output</label>
+                <textarea id="outputtext2" rows="1" cols="80"></textarea>
+                <button type="button" onclick="document.getElementById('outputtext2').value = nanowrimo.countWords(document.getElementById('inputtext2').value);">Count</button>
+            </fieldset>
+        </form>
+
         <script src="index.js"></script>
     </body>
 </html>
