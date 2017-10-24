@@ -1,21 +1,23 @@
-'use strict';
+(function(global) {
+    'use strict';
 
-this.nanowrimo = this.nanowrimo || {};
+    global.nanowrimo = global.nanowrimo || {};
 
-this.nanowrimo.obfuscateText = function(text) {
-    return text
-        .replace(/\W/, ' ')
-        .split(' ')
-        .filter(function(x) { return x !== '' })
-        .map(function() { return 'a' })
-        .join(' ');
-};
+    global.nanowrimo.obfuscateText = function(text) {
+        return text
+            .replace(/\W/, ' ')
+            .split(' ')
+            .filter(function(x) { return x !== '' })
+            .map(function() { return 'a' })
+            .join(' ');
+    };
 
-this.nanowrimo.countWords = function(text) {
-    return text
-        .replace(/\W/, ' ')
-        .split(' ')
-        .filter(function(x) { return x !== '' })
-        .map(function() { return 'a' })
-        .length;
-};
+    global.nanowrimo.countWords = function(text) {
+        return text
+            .replace(/\W/, ' ')
+            .split(' ')
+            .filter(function(x) { return x !== '' })
+            .map(function() { return 'a' })
+            .length;
+    };
+})(this);
