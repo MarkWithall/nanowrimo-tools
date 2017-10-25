@@ -1,12 +1,21 @@
-'use strict';
+(function(global) {
+    'use strict';
 
-this.nanowrimo = this.nanowrimo || {};
+    global.nanowrimo = global.nanowrimo || {};
 
-this.nanowrimo.obfuscateText = function (text) {
-    return text
-        .replace(/\W/, ' ')
-        .split(' ')
-        .filter(function(x) { return x !== '' })
-        .map(function() { return 'a' })
-        .join(' ');
-};
+    global.nanowrimo.obfuscateText = function(text) {
+        return splitIntoWords(text).join(' ');
+    };
+
+    global.nanowrimo.countWords = function(text) {
+        return splitIntoWords(text).length;
+    };
+
+    function splitIntoWords(text) {
+        return text
+            .replace(/\W/, ' ')
+            .split(' ')
+            .filter(function(x) { return x !== '' })
+            .map(function() { return 'a' });
+    }
+})(this);
